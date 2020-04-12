@@ -5,3 +5,12 @@ body{
 h1{
     color : #34495e;
 }
+
+.btn {
+    cursor: pointer;
+} /* btn 클래스에 적용 되는 속성*/
+
+.clicked {
+    color : violet;
+}
+
