@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../cssFolder/enterprise.css">
+    <script>
+        arr = ['사자.jpg', '소우주.jpg', '대나무숲.jpg'];
+        function proc1() {
+            ran = parseInt(Math.random() * arr.length);
+            document.querySelector('#img1').src = "../imagesFolder/" + arr[ran];
+        }
+
+        function proc2(th){
+            th.style.display = "none";
+            a = setInterval(function(){
+                ran = Math.floor(Math.random() * arr.length);
+                document.querySelector('#img2').src = "../imagesFolder/" + arr[ran];
+            }, 1000)
+        }
+
+        function proc3(){
+            
+            document.querySelector('#btn1').style.display ="inline";
+            clearInterval(a);
+        }
+
+        function proc4(){
+            const vul = document.getElementsByTagName('ul')[0];
+            const vli = document.getElementsByTagName('li');
+
+            let str = "";
+            for (let i = 0; i < vli.length; i++) {
+                str += vli[i].firstChild.data + "<br>";
+                
+            }
+            document.getElementById('result4').innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <h2>이미지 변경하기</h2>
+        <button type="button" onclick="proc1()">실행</button>
+        <div id="result1">
+            <img id="img1" src="../imagesFolder/Anne-Marie(앤마리)-2002.jpg">
+
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>이미지 변경하기</h2>
+
+        <button type="button" id="btn1" onclick="proc2(this)">실행</button>
+        <button type="button" onclick="proc3()">종료</button>
+        <div id="result2">
+            <img id="img2" src="../imagesFolder/가구2.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="box">
+		<h2 class="aa">li의 내용 가져오기</h2>
+		- firstChild - Object[text] <br> - firstChild.data - 실제 값<br>
+		- firstChild.nodeValue - 실제 값<br>
+		<ul>
+			<li>매화꽃</li>
+			<li>산수유</li>
+			<li>국화</li>
+			<li>라일락</li>
+		</ul>
+		<button type="button" onclick="proc4()">실행</button>
+		<div id="result4"></div>
+	</div>
+
+
+</body>
+
+</html>

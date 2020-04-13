@@ -8,7 +8,7 @@ const OTHER_COLOR = "#7f8c8d";
 function handleClick() {
     const currentColor = title.style.color;
     const currentClass = title.className;
-    console.log(currentClass);
+    // console.log(currentClass);
 
 
     const hasClass= title.classList.contains(CLICKED_CLASS);

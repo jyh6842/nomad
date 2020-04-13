@@ -1,0 +1,21 @@
+.box {
+    margin : 10px;
+    padding : 20px;
+    background-color: #efefef;
+    height: auto;
+}
+
+.box button, .box input[type=button]{
+	background: blue;
+	color : white;
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 30px;
+}
+
+.box div {
+	border: 2px dashed orange;
+	padding: 10px;
+	height: auto;
+	
+}
